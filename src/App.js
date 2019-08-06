@@ -5,7 +5,6 @@ import * as cocoSsd from "@tensorflow-models/coco-ssd";
 const App = (props) => {
   // promised loading model 
   const loadModel = cocoSsd.load('mobilenet_v2');
-
   // Refs
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
@@ -13,7 +12,8 @@ const App = (props) => {
   const vidRef = useRef(null);
 
   // Utils
-  const detectUtility = (video, model) => {
+
+  const detectUtility = (video, model) => { // uses detect method on the model then calls the box building util below on each object recognized
     model.detect(video)
       .then(discriminations => {
         buildRectangle(discriminations);
@@ -22,60 +22,59 @@ const App = (props) => {
     requestAnimationFrame(() => detectUtility(video, model));
   };
 
-  const buildRectangle = discriminations => {
+  const buildRectangle = discriminations => { // Draws a rectangle with html around each discriminations in the object passed in
     // !!!!
     // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
     // !!!!
 
-    const ctx = canvasRef.current.getContext('2d');
+    const ctx = canvasRef.current.getContext('2d'); // define the rectangle
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     // Build the rectable styling
-    ctx.strokeStyle = 'white';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'green';
+    ctx.lineWidth = 2;
     ctx.textBaseline = 'bottom';
-    ctx.font = 'italic 12px sans-serif';
+    ctx.font = '14px sans-serif';
 
-    discriminations.forEach(guess => {
-      // label each guess on the rectangle with a name & confidence
+    discriminations.forEach(guess => { // Draw the rectangle around each object prediction
       const guessText = `${guess.class}`;
       const textWidth = ctx.measureText(guessText).width;
       const textHeight = parseInt(ctx.font, 10);
       ctx.strokeRect(guess.bbox[0], guess.bbox[1], guess.bbox[2], guess.bbox[3]);
-      ctx.fillStyle = '#F00';
+      ctx.fillStyle = '#18fc03';
       ctx.fillRect( 
         guess.bbox[0]-ctx.lineWidth/2, 
         guess.bbox[1], 
         textWidth + ctx.lineWidth, 
         -textHeight);
-      ctx.fillStyle = '#FFF'
+      ctx.fillStyle = '#fc0303'
       ctx.fillText(guessText, guess.bbox[0], guess.bbox[1]);
     });
   };
 
-  // Start the app when it updates
   // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {
-    // Define the rules for the mediaDevices
-    const rules = {
+    const rules = {// Define the rules for the mediaDevices in loadCam below
       audio: false,
       video: {facingMode: 'environment'}
     };
 
-    // Can user use cam? Can user access on browser?
+    // Control if user has cam / browser
     console.log(navigator)
-    if (navigator.mediaDevices.getUserMedia) {
-      const loadCam = navigator.mediaDevices.getUserMedia(rules)
+    if (navigator.mediaDevices.getUserMedia) { // check if the browser is getting a prompt for cam permission
+      const loadCam = navigator.mediaDevices.getUserMedia(rules) // returns promise, ask for cam permission with constraints in rules above
       .then(stream => {
         vidRef.current.srcObject = stream;
-        return new Promise(resolve => vidRef.current.onloadedmetadata = resolve);
+        return new Promise(resolve => 
+          vidRef.current.onloadedmetadata = resolve
+          );
       })
       .catch(err => {
         alert(`Please allow the browser to access your device's camera!`)
       });
 
       // Wait for the cocoSsd model to load, then for the cam to load
-      Promise.all([loadModel, loadCam])
+      Promise.all([loadModel, loadCam]) // wait for loading the coco-ssd model & the cam feed, then call detectutility with the vidref and results
       .then(
         res => {
           detectUtility(vidRef.current, res[0])
@@ -85,11 +84,11 @@ const App = (props) => {
         err => console.error(`Error loading the models / cam ${err}`));
     }
     else {
-      alert('You should probably download Chrome(ium) to fix this');
+      alert('You should probably download Chrome to fix this');
     }
   });
 
-  // Render the app
+  // Render the feed & app
   return (
     <>
       <video

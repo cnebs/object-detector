@@ -38,7 +38,7 @@ export default class Landing extends React.Component {
         <Row>
             <h3 id='header'>Image Recognizer</h3>
           <div id='wrapper'>
-            <Button onClick={this.handleClick} variant="primary">Launch Camera & Recognizer</Button>
+            <Button onClick={this.handleClick} variant="primary">Launch</Button>
           </div>
         </Row> :
         
