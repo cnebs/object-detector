@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/imageRecognizer/static/css/main.053f6710.chunk.css",
-    "main.js": "/imageRecognizer/static/js/main.5eb9b062.chunk.js",
-    "main.js.map": "/imageRecognizer/static/js/main.5eb9b062.chunk.js.map",
+    "main.js": "/imageRecognizer/static/js/main.94840a64.chunk.js",
+    "main.js.map": "/imageRecognizer/static/js/main.94840a64.chunk.js.map",
     "runtime~main.js": "/imageRecognizer/static/js/runtime~main.93f0e3dc.js",
     "runtime~main.js.map": "/imageRecognizer/static/js/runtime~main.93f0e3dc.js.map",
     "static/js/2.b524c539.chunk.js": "/imageRecognizer/static/js/2.b524c539.chunk.js",
     "static/js/2.b524c539.chunk.js.map": "/imageRecognizer/static/js/2.b524c539.chunk.js.map",
     "index.html": "/imageRecognizer/index.html",
-    "precache-manifest.3bd5de3cdffc39e49945088310d5536d.js": "/imageRecognizer/precache-manifest.3bd5de3cdffc39e49945088310d5536d.js",
+    "precache-manifest.61538b9ab162cadde85ec274a34a799a.js": "/imageRecognizer/precache-manifest.61538b9ab162cadde85ec274a34a799a.js",
     "service-worker.js": "/imageRecognizer/service-worker.js",
     "static/css/main.053f6710.chunk.css.map": "/imageRecognizer/static/css/main.053f6710.chunk.css.map"
   }
