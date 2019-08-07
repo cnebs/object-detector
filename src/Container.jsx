@@ -24,9 +24,11 @@ export default class Landing extends React.Component {
           <h1 id='header-title'>Object Detector</h1>
           <a id='header' href='https://www.github.com/cnebs'>My GitHub</a>
           <br></br>
-          <a id='header' href='https://www.npmjs.com/package/@tensorflow/tfjs'>Tensorflow.js</a>
-          <br></br>
-          <a id='header' href='https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd'>Detection Model</a>
+          <div id='support-links'>
+            <a id='header-links-1' href='https://www.npmjs.com/package/@tensorflow/tfjs'>Tensorflow.js</a>
+            
+            <a id='header-links-2' href='https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd'>Detection Model</a>
+          </div>
           <div id='wrapper'>
             <button onClick={this.handleClick} type="button">Launch</button>
           </div>

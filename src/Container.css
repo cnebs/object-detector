@@ -18,6 +18,28 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+#support-links {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+#header-links-1 {
+  display: flex;
+  justify-content: space-around;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 5px;
+}
+
+#header-links-2 {
+  display: flex;
+  justify-content: space-around;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 5px;
+}
+
 button {
   height: 30px;
   width: 200px;
