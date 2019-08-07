@@ -6,13 +6,11 @@
   "dependencies": {
     "@tensorflow-models/coco-ssd": "^2.0.0",
     "@tensorflow/tfjs": "^1.2.6",
-    "bootstrap": "^4.3.1",
     "express": "^4.17.1",
     "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
     "path": "^0.12.7",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "typescript": "^3.5.3"

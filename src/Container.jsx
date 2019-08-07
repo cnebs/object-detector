@@ -1,10 +1,6 @@
 import React from 'react';
 import App from './App.js';
 import './Container.css';
-import Container from 'react-bootstrap/Container';
-// import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button'
 
 export default class Landing extends React.Component {
 
@@ -33,9 +29,9 @@ export default class Landing extends React.Component {
 
   render() {
     return (
-    <Container id='container'>
+    <div id='container'>
       {this.state.begin === false ? 
-        <Row>
+        <div>
           <h1 id='header-title'>Object Detector</h1>
           <a id='header' href='https://www.github.com/cnebs'>My GitHub</a>
           <br></br>
@@ -43,19 +39,19 @@ export default class Landing extends React.Component {
           <br></br>
           <a id='header' href='https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd'>Detection Model</a>
           <div id='wrapper'>
-            <Button onClick={this.handleClick} variant="primary">Launch</Button>
+            <button onClick={this.handleClick} type="button">Launch</button>
           </div>
-        </Row> :
-        <Row>
+        </div> :
+        <div>
           <p></p>
           <h3 id='header'>Object Detector</h3>
           <>
           {this.state.loading === true ? <span id='header'>Loading...</span> : <></>}
           <App />
           </>
-        </Row>
+        </div>
       }
-    </Container>
+    </div>
     )
   }
 
