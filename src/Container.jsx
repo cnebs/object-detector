@@ -22,11 +22,12 @@ export default class Landing extends React.Component {
       {this.state.begin === false ? 
         <div>
           <h1 id='header-title'>Object Detector</h1>
-          <a id='header' href='https://www.github.com/cnebs'>My GitHub</a>
+          <hr></hr>
+          <br></br>
+          <a id='header' href='https://www.github.com/cnebs'>GitHub</a>
           <br></br>
           <div id='support-links'>
             <a id='header-links-1' href='https://www.npmjs.com/package/@tensorflow/tfjs'>Tensorflow.js</a>
-            
             <a id='header-links-2' href='https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd'>Detection Model</a>
           </div>
           <div id='wrapper'>
@@ -36,8 +37,10 @@ export default class Landing extends React.Component {
         <div>
           <p></p>
           <h3 id='header'>Object Detector</h3>
+          <hr></hr>
+          <br></br>
           <>
-          <App />
+            <App />
           </>
         </div>
       }
