@@ -18,6 +18,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+#canvas {
+  height: 200px;
+}
 
 button {
   height: 30px;
