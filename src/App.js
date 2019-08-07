@@ -60,7 +60,6 @@ const App = (props) => {
     };
 
     // Control if user has cam / browser
-    console.log(navigator)
     if (navigator.mediaDevices.getUserMedia) { // check if the browser is getting a prompt for cam permission
       const loadCam = navigator.mediaDevices.getUserMedia(rules) // returns promise, ask for cam permission with constraints in rules above
       .then(stream => {

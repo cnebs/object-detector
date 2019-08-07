@@ -2,7 +2,7 @@
   "name": "mvp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cnebs.github.io/imageRecognizer",
+  "homepage": "https://cnebs.github.io/object-detector",
   "dependencies": {
     "@tensorflow-models/coco-ssd": "^2.0.0",
     "@tensorflow/tfjs": "^1.2.6",

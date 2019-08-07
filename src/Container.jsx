@@ -36,20 +36,23 @@ export default class Landing extends React.Component {
     <Container id='container'>
       {this.state.begin === false ? 
         <Row>
-            <h3 id='header'>Image Recognizer</h3>
+          <h1 id='header-title'>Object Detector</h1>
+          <a id='header' href='https://www.github.com/cnebs'>My GitHub</a>
+          <br></br>
+          <a id='header' href='https://www.npmjs.com/package/@tensorflow/tfjs'>Tensorflow.js</a>
+          <br></br>
+          <a id='header' href='https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd'>Detection Model</a>
           <div id='wrapper'>
             <Button onClick={this.handleClick} variant="primary">Launch</Button>
           </div>
         </Row> :
-        
-        <Row> 
+        <Row>
           <p></p>
-          <h3 id='header'>Image Recognizer</h3>
+          <h3 id='header'>Object Detector</h3>
           <>
           {this.state.loading === true ? <span id='header'>Loading...</span> : <></>}
           <App />
           </>
-          <a href='github.com/cnebs' id='header'>Github</a>
         </Row>
       }
     </Container>
