@@ -19,7 +19,7 @@ Download the modules
 npm install
 ```
 
-Use this script to see a live version
+To see a live, local version
 
 ```
 npm run start
@@ -27,9 +27,16 @@ npm run start
 
 ## Deployment
 
-The live demo of this app is deployed using gh-pages, [right here](https://cnebs.github.io/object-detector).
-You can run
-```npm run predeploy``` then ```npm deploy``` to push to your gh-pages homepage, defined in your package.json.
+* The live demo of this app is deployed using gh-pages, [right here](https://cnebs.github.io/object-detector).
+
+To publish to gh-pages
+```
+npm run predeploy
+``` 
+```
+npm run deploy
+``` 
+This will push to your gh-pages homepage defined in your package.json
 
 ## Built With
 
