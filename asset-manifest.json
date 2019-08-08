@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/object-detector/static/css/main.51db1902.chunk.css",
-    "main.js": "/object-detector/static/js/main.cac1021e.chunk.js",
-    "main.js.map": "/object-detector/static/js/main.cac1021e.chunk.js.map",
+    "main.css": "/object-detector/static/css/main.84c32647.chunk.css",
+    "main.js": "/object-detector/static/js/main.c159f04b.chunk.js",
+    "main.js.map": "/object-detector/static/js/main.c159f04b.chunk.js.map",
     "runtime~main.js": "/object-detector/static/js/runtime~main.8e097e11.js",
     "runtime~main.js.map": "/object-detector/static/js/runtime~main.8e097e11.js.map",
     "static/js/2.5681ae19.chunk.js": "/object-detector/static/js/2.5681ae19.chunk.js",
     "static/js/2.5681ae19.chunk.js.map": "/object-detector/static/js/2.5681ae19.chunk.js.map",
     "index.html": "/object-detector/index.html",
-    "precache-manifest.bb433f193e1d2fc2bda3aa4a9d7286fa.js": "/object-detector/precache-manifest.bb433f193e1d2fc2bda3aa4a9d7286fa.js",
+    "precache-manifest.372bfc6a3db6fed8f6b9b9c9ee928e99.js": "/object-detector/precache-manifest.372bfc6a3db6fed8f6b9b9c9ee928e99.js",
     "service-worker.js": "/object-detector/service-worker.js",
-    "static/css/main.51db1902.chunk.css.map": "/object-detector/static/css/main.51db1902.chunk.css.map",
+    "static/css/main.84c32647.chunk.css.map": "/object-detector/static/css/main.84c32647.chunk.css.map",
     "static/media/spinner-red.gif": "/object-detector/static/media/spinner-red.d6578615.gif"
   }
 }
