@@ -12,14 +12,15 @@ const App = (props) => {
   const vidRef = useRef(null);
 
   // Utils
-
   const detectUtility = (video, model) => { // uses detect method on the model then calls the box building util below on each object recognized
   
     model.detect(video)
       .then(discriminations => {
-        buildRectangle(discriminations); // and do this for each frame
-    });
-
+        // console.log(discriminations);
+        // props.handleCountFrames()
+        buildRectangle(discriminations);
+        // props.handleGuess(discriminations);
+      })
     requestAnimationFrame(() => detectUtility(video, model));
   };
 
@@ -55,6 +56,7 @@ const App = (props) => {
 
   // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {
+
     const rules = {// Define the rules for the mediaDevices in loadCam below
       audio: false,
       video: {facingMode: 'environment'}
@@ -104,7 +106,7 @@ const App = (props) => {
         ref={canvasRef}
         className='app-position'
         width={windowWidth}
-        height={windowHeight}
+        height={windowHeight-100}
       />
     </>
     );
