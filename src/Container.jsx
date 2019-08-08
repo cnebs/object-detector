@@ -85,12 +85,12 @@ export default class Landing extends React.Component {
           <div id='wrapper'>
             <button onClick={this.handleClick} type="button">Launch</button>
           </div>
-          <hr id='second-hr'></hr>
+            <hr id='second-hr'></hr>
           <br/>
           <br/>
-          <span id='header'>Want to train your own image classifyer?</span>
+            <span id='header'>Want to train your own image classifyer?</span>
           <br></br>
-          <a id='header' href='https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#6'>Tensorflow tutorial</a>
+            <a id='header' href='https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#6'>Tensorflow tutorial</a>
         </div> :
 
         // App Page
