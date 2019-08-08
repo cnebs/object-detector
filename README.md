@@ -4,6 +4,10 @@ Combining TensorFlow.js and coco-ssd modeling on React.js to build a web-interfa
 
 *Interested in training the model more? Tensorflow has a js guide to get you started with classifying images [right here](https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#0).*
 
+<p align="center">
+  <img width="250" height="400" src="https://media.giphy.com/media/Kco2VgLAQ0SBz4mMFk/giphy.gif">
+</p>
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -20,7 +24,6 @@ Download the modules
 ```
 npm install
 ```
-
 To see a live, local version
 
 ```
