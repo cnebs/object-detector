@@ -71,7 +71,7 @@ export default class Landing extends React.Component {
       // Landing Page
         <div>
             <h1 id='header-title'>Object Detector</h1>
-          <hr></hr>
+          <hr id='first-hr'></hr>
           <br></br>
             <a id='header' href='https://www.github.com/cnebs'>Project GitHub</a>
           <br></br>
@@ -85,6 +85,9 @@ export default class Landing extends React.Component {
           <div id='wrapper'>
             <button onClick={this.handleClick} type="button">Launch</button>
           </div>
+          <hr id='second-hr'></hr>
+          <br/>
+          <br/>
           <span id='header'>Want to train your own image classifyer?</span>
           <br></br>
           <a id='header' href='https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#6'>Tensorflow tutorial</a>
@@ -93,7 +96,7 @@ export default class Landing extends React.Component {
         // App Page
         <div>
           <h3 id='header'>Object Detector</h3>
-          <hr></hr>
+          <hr id='first-hr'></hr>
           <>
             {this.state.loading === true ? 
             <span id='header'><img src={spinner} alt="loading ..." /></span> : 

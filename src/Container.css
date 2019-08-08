@@ -1,10 +1,4 @@
 
-hr {
-  height: 1px;
-  border: 0;
-  background-color: #c7c7c7;
-  width: 70%;
-}
 
 button {
   height: 30px;
@@ -13,9 +7,23 @@ button {
   font-family: 'Titillium Web', sans-serif;
 }
 
+#first-hr {
+  height: 1px;
+  border: 0;
+  background-color: #c7c7c7;
+  width: 70%;
+}
+
+#second-hr {
+  height: 1px;
+  border: 0;
+  background-color: #c7c7c7;
+  width: 40%;
+}
+
 #wrapper {
   width: 100%;
-  height: 100px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
