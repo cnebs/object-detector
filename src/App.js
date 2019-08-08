@@ -16,7 +16,7 @@ const App = (props) => {
   const detectUtility = (video, model) => { // uses detect method on the model then calls the box building util below on each object recognized
     model.detect(video)
       .then(discriminations => {
-        buildRectangle(discriminations);
+        buildRectangle(discriminations); // and do this for each frame
     });
 
     requestAnimationFrame(() => detectUtility(video, model));
@@ -69,21 +69,21 @@ const App = (props) => {
           );
       })
       .catch(err => {
-        alert(`Please allow the browser to access your device's camera!`)
+        alert(`Please allow the browser to access your device's camera!!!`)
       });
 
       // Wait for the cocoSsd model to load, then for the cam to load
       Promise.all([loadModel, loadCam]) // wait for loading the coco-ssd model & the cam feed, then call detectutility with the vidref and results
       .then(
         res => {
-          detectUtility(vidRef.current, res[0])
+          detectUtility(vidRef.current, res[0]) // build guesses on each image from the feed
         }
         )
       .catch(
         err => console.error(`Error loading the models / cam ${err}`));
     }
     else {
-      alert('You should probably download Chrome to fix this');
+      alert('You should probably download Chrome buddy');
     }
   });
 
