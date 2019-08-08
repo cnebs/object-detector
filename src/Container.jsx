@@ -8,23 +8,16 @@ export default class Landing extends React.Component {
     super(props);
     this.state = {
       begin: false,
-      loading: false
+      loading: true,
     }
     this.handleClick = this.handleClick.bind(this);
-    this.handleLoading = this.handleLoading.bind(this);
   }
 
   handleClick() {
     this.setState({begin: true})
-  }
-
-  handleLoading(bool) {
-    if (bool === false) {
+    setTimeout(() => {
       this.setState({loading: false})
-    }
-    else if (bool === true) {
-      this.setState({loading: true})
-    }
+    }, 5000);
   }
 
   render() {
@@ -47,7 +40,7 @@ export default class Landing extends React.Component {
           <h3 id='header'>Object Detector</h3>
           <>
           {this.state.loading === true ? <span id='header'>Loading...</span> : <></>}
-          <App />
+          <App/>
           </>
         </div>
       }
