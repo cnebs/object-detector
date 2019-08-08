@@ -1,19 +1,24 @@
 import React from 'react';
 import App from './App.js';
 import './Container.css';
+import spinner from './assets/spinner-red.gif'
 
 export default class Landing extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      begin: false
+      begin: false,
+      loading: true,
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState({begin: true})
+    setTimeout(() => {
+      this.setState({loading: false})
+    }, 5000);
   }
 
   render() {
@@ -35,12 +40,12 @@ export default class Landing extends React.Component {
           </div>
         </div> :
         <div>
-          <p></p>
           <h3 id='header'>Object Detector</h3>
           <hr></hr>
-          <br></br>
+          {/* <br></br> */}
           <>
-            <App />
+            {this.state.loading === true ? <span id='header'><img src={spinner} alt="loading ..." /></span> : <></>}
+            <App/>
           </>
         </div>
       }

@@ -14,6 +14,7 @@ const App = (props) => {
   // Utils
 
   const detectUtility = (video, model) => { // uses detect method on the model then calls the box building util below on each object recognized
+  
     model.detect(video)
       .then(discriminations => {
         buildRectangle(discriminations); // and do this for each frame
