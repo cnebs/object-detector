@@ -2,6 +2,8 @@
 
 Combining TensorFlow.js and coco-ssd modeling on React.js to build a web-interface for live cam-feed image object recognition. This project simply applies the object detection model used on single images to multiple images in the form of a video feed using React.js.
 
+*Interested in training the model more? Tensorflow has a js guide to get you started with classifying images [right here](https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#0).*
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
