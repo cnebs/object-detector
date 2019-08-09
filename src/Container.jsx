@@ -25,6 +25,7 @@ export default class Landing extends React.Component {
 
   handleClick() {
     this.setState({begin: true})
+    console.log('https://www.linkedin.com/in/cneblett/')
     setTimeout(() => {
       this.setState({loading: false})
     }, 5000);
