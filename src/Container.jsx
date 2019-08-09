@@ -63,7 +63,7 @@ export default class Landing extends React.Component {
 
   render() {
     // console.log(this.state.guessData)
-    console.log(this.state.framesProcessed);
+    // console.log(this.state.framesProcessed);
     return (
     <div id='container'>
 
