@@ -8,10 +8,14 @@ button {
 }
 
 #first-hr {
+  border:none;
   height: 1px;
-  border: 0;
-  background-color: #c7c7c7;
-  width: 70%;
+ 	width: 70%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #c7c7c7;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
 }
 
 #second-hr {
@@ -39,6 +43,13 @@ button {
   display: flex;
   justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
 }
 
 #support-links {
