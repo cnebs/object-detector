@@ -8,6 +8,8 @@ Combining TensorFlow.js and coco-ssd modeling on React.js to build a web-interfa
   <img width="250" height="400" src="https://media.giphy.com/media/Kco2VgLAQ0SBz4mMFk/giphy.gif">
 </p>
 
+* The live demo of this app is deployed, [right here](https://cnebs.github.io/object-detector).
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -29,19 +31,6 @@ To see a live, local version
 ```
 npm run start
 ```
-
-## Deployment
-
-* The live demo of this app is deployed using gh-pages, [right here](https://cnebs.github.io/object-detector).
-
-To publish to gh-pages
-```
-npm run predeploy
-``` 
-```
-npm run deploy
-``` 
-This will push to your gh-pages homepage defined in your package.json
 
 ## Built With
 
